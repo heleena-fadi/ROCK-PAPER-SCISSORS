@@ -1,0 +1,80 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/colorful-blocks-blank-white-background-vector_53876-67038.jpg?w=740&t=st=1672771315~exp=1672771915~hmac=1da023fba49103603bb5df33013e3baa8eb81c1b3ae2c5c2e34f3aa8126bb9b8");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.imgs_wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue;
+}
+h1:hover{
+    color: darkslateblue;
+    
+}
+p{
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px; 
+}
+
+.img {
+    width: 30vw;
+    min-width: 100px;
+}
+.img1{
+transform: rotateY(180deg);
+
+}
+.buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 120px;
+}
+#scissors,#rock,#paper{
+    display: none;
+}
+
+button{
+    height: 80px;
+    width: 140px;
+    font-size: x-large;
+    font-weight: bold;
+    color: #fff;
+    background-color:darkblue;
+    border-radius: 40px;
+    cursor: pointer;
+    border: solid 4px floralwhite;
+}
+
+.move_hand {
+    animation-name: tiltMoveShaking;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes tiltMoveShaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    12% { transform: translate(5px, 5px) rotate(5deg); }
+    25% { transform: translate(0, 0) rotate(0eg); }
+    36% { transform: translate(-5px, 5px) rotate(-5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    60% { transform: translate(0, 0) rotate(0deg); }
+    70% { transform: translate(5px, 5px) rotate(5deg); }
+    80% { transform: translate(0, 0) rotate(0eg); }
+    90% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
